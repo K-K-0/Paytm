@@ -1,1 +1,5 @@
-const JWT_SECRET = "great"
+
+
+module.exports = {
+    JWT_SECRET: "great"
+}

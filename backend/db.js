@@ -1,7 +1,18 @@
 // backend/db.js
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb://localhost:27017/paytm")
+mongoose.connect(
+    "mongodb+srv://aadityyadav1:Aadity7531@paytm.hijdgjz.mongodb.net/paytm?retryWrites=true&w=majority&appName=Paytm",
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    }
+)
+    .then(() => console.log("Connected to MongoDB"))
+    .catch((err) => console.error("MongoDB connection error:", err));
+
+
+
 
 // Create a Schema for Users
 const userSchema = new mongoose.Schema({
